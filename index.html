@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReLoop Nexus - Regenerative Packaging System</title>
+    <title>ReLoop Nexus - Business Case</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <script>
@@ -12,26 +12,46 @@
                 extend: {
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
-                        brand: { 500: '#10B981', 600: '#059669', 900: '#064E3B' } // Emerald Green
+                        brand: { 500: '#10B981', 600: '#059669', 900: '#064E3B' }
                     }
                 }
             }
         }
     </script>
+    <style>
+        /* Animasi Transisi Bahasa */
+        .fade-in { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased">
 
-    <nav class="bg-white/80 backdrop-blur-md border-b border-slate-200 fixed w-full top-0 z-50">
+    <nav class="bg-white/90 backdrop-blur-md border-b border-slate-200 fixed w-full top-0 z-50 transition-all">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-2">
                 <div class="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">R</div>
                 <span class="text-xl font-bold text-slate-900">ReLoop <span class="text-brand-600">Nexus</span></span>
             </div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
-                <a href="#problem" class="hover:text-brand-600 transition">The Crisis</a>
-                <a href="#solution" class="hover:text-brand-600 transition">Our Tech</a>
-                <a href="#impact" class="hover:text-brand-600 transition">Impact</a>
-                <a href="#team" class="hover:text-brand-600 transition">Team</a>
+            
+            <div class="flex items-center gap-6">
+                <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+                    <a href="#problem" class="hover:text-brand-600 transition">
+                        <span class="lang-id">Masalah</span><span class="lang-en hidden">The Problem</span>
+                    </a>
+                    <a href="#solution" class="hover:text-brand-600 transition">
+                        <span class="lang-id">Solusi</span><span class="lang-en hidden">Solution</span>
+                    </a>
+                    <a href="#prototype" class="hover:text-brand-600 transition">
+                        <span class="lang-id">Prototipe</span><span class="lang-en hidden">Prototype</span>
+                    </a>
+                    <a href="#impact" class="hover:text-brand-600 transition">
+                        <span class="lang-id">Dampak</span><span class="lang-en hidden">Impact</span>
+                    </a>
+                </div>
+
+                <button onclick="toggleLanguage()" class="flex items-center gap-2 bg-slate-100 border border-slate-300 px-3 py-1.5 rounded-md text-xs font-bold text-slate-700 hover:bg-slate-200 transition">
+                    <span id="btn-text">EN 🇬🇧</span>
+                </button>
             </div>
         </div>
     </nav>
@@ -39,168 +59,270 @@
     <header class="pt-32 pb-20 lg:pt-48 lg:pb-32 bg-gradient-to-br from-slate-900 via-slate-800 to-brand-900 text-white relative overflow-hidden">
         <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-brand-500 rounded-full blur-3xl opacity-20"></div>
         
-        <div class="container mx-auto px-6 relative z-10 text-center max-w-5xl">
+        <div class="container mx-auto px-6 relative z-10 text-center max-w-5xl fade-in">
             <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-1.5 rounded-full text-sm font-medium mb-8 backdrop-blur-sm">
                 <span class="w-2 h-2 bg-brand-500 rounded-full animate-pulse"></span>
-                Universitas Trunojoyo Madura - Business Case Team
+                Universitas Trunojoyo Madura
             </div>
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight tracking-tight">
-                Revolusi Kemasan Regeneratif dengan <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-emerald-200">AI-Driven Material Recovery</span>
-            </h1>
-            <p class="text-slate-300 text-lg md:text-xl mb-10 max-w-3xl mx-auto leading-relaxed">
-                ReLoop Nexus mengintegrasikan <strong>Smart Sorting AI</strong> dan <strong>Partisipasi Komunitas</strong> untuk mengubah limbah kemasan pasca-konsumsi menjadi material bernilai tinggi bagi industri.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#solution" class="bg-brand-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-brand-500 transition shadow-lg shadow-brand-900/50">
-                    Pelajari Solusi
-                </a>
-                <a href="#problem" class="bg-white/10 text-white border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition backdrop-blur-sm">
-                    Lihat Masalah
+            
+            <div class="lang-id">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                    Revolusi Kemasan dengan <br> <span class="text-brand-400">AI-Driven Material Recovery</span>
+                </h1>
+                <p class="text-slate-300 text-lg mb-10 max-w-3xl mx-auto">
+                    Mengintegrasikan Smart Sorting AI dan Partisipasi Komunitas untuk mengubah limbah kemasan menjadi material bernilai tinggi.
+                </p>
+                <a href="#prototype" class="bg-brand-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-brand-500 transition shadow-lg">
+                    Lihat Prototipe
                 </a>
             </div>
+
+            <div class="lang-en hidden">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                    Revolutionizing Packaging with <br> <span class="text-brand-400">AI-Driven Material Recovery</span>
+                </h1>
+                <p class="text-slate-300 text-lg mb-10 max-w-3xl mx-auto">
+                    Integrating Smart Sorting AI and Community Participation to transform packaging waste into high-value reclaimed materials.
+                </p>
+                <a href="#prototype" class="bg-brand-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-brand-500 transition shadow-lg">
+                    View Prototype
+                </a>
+            </div>
+
         </div>
     </header>
 
-    <section id="problem" class="py-24 bg-white">
+    <section id="problem" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-brand-600 font-bold tracking-wide uppercase text-sm mb-3">Latar Belakang Masalah</h2>
-                    <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Sistem "Take-Make-Waste" Gagal Menangani Krisis Plastik.</h3>
-                    <p class="text-slate-600 text-lg mb-6 leading-relaxed">
-                        Di Indonesia, sistem pengumpulan terfragmentasi dan penyortiran manual yang tidak efisien menyebabkan mayoritas sampah kemasan berakhir di TPA atau bocor ke lingkungan.
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-brand-600 font-bold uppercase text-sm mb-2">
+                    <span class="lang-id">Latar Belakang</span><span class="lang-en hidden">Background</span>
+                </h2>
+                <h3 class="text-3xl font-bold text-slate-900">
+                    <span class="lang-id">Krisis Sampah Plastik & Inefisiensi</span>
+                    <span class="lang-en hidden">Plastic Waste Crisis & Inefficiency</span>
+                </h3>
+                <p class="mt-4 text-slate-600">
+                    <span class="lang-id">7.8 Juta Ton sampah plastik dihasilkan tiap tahun, namun < 20% yang didaur ulang karena sulitnya pemilahan.</span>
+                    <span class="lang-en hidden">7.8 Million Tons of plastic waste generated annually, yet < 20% is recycled due to sorting complexities.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="solution" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">
+                    <span class="lang-id">Ekosistem ReLoop Nexus</span>
+                    <span class="lang-en hidden">The ReLoop Nexus Ecosystem</span>
+                </h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                    <div class="text-4xl mb-4">🤖</div>
+                    <h4 class="text-xl font-bold mb-2">AI Sorting</h4>
+                    <p class="text-slate-600 text-sm">
+                        <span class="lang-id">Teknologi Computer Vision untuk memilah jenis plastik secara otomatis dengan akurasi tinggi.</span>
+                        <span class="lang-en hidden">Computer Vision technology to automatically sort plastic types with high accuracy.</span>
                     </p>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-                            <div>
-                                <strong class="text-slate-900 block">7.8 Juta Ton Sampah Plastik</strong>
-                                <span class="text-slate-500 text-sm">Dihasilkan Indonesia setiap tahunnya.</span>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path></svg>
-                            <div>
-                                <strong class="text-slate-900 block">< 20% Tingkat Daur Ulang Global</strong>
-                                <span class="text-slate-500 text-sm">Karena sulitnya memisahkan material kompleks/berlapis.</span>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-slate-100 p-8 rounded-2xl text-center">
-                        <div class="text-4xl font-bold text-slate-900 mb-2">61%</div>
-                        <div class="text-sm text-slate-600">Sampah Rumah Tangga dari Produk FMCG</div>
-                    </div>
-                    <div class="bg-slate-100 p-8 rounded-2xl text-center">
-                        <div class="text-4xl font-bold text-slate-900 mb-2">High</div>
-                        <div class="text-sm text-slate-600">Cost & Contamination in Manual Sorting</div>
-                    </div>
-                    <div class="col-span-2 bg-slate-900 p-8 rounded-2xl text-center text-white">
-                        <div class="text-xl font-semibold">"Sirkularitas hanya konsep tanpa integrasi data."</div>
-                    </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                    <div class="text-4xl mb-4">📱</div>
+                    <h4 class="text-xl font-bold mb-2">Smart App</h4>
+                    <p class="text-slate-600 text-sm">
+                        <span class="lang-id">Aplikasi penghubung konsumen, pemulung, dan bank sampah dengan sistem insentif.</span>
+                        <span class="lang-en hidden">App connecting consumers, waste pickers, and waste banks with an incentive system.</span>
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h4 class="text-xl font-bold mb-2">Dashboard</h4>
+                    <p class="text-slate-600 text-sm">
+                        <span class="lang-id">Pelacakan data real-time untuk transparansi alur limbah dan dampak lingkungan.</span>
+                        <span class="lang-en hidden">Real-time data tracking for waste flow transparency and environmental impact.</span>
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="solution" class="py-24 bg-slate-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-brand-600 font-bold tracking-wide uppercase text-sm mb-3">Our Solution</h2>
-                <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">4 Pilar Inovasi ReLoop Nexus</h3>
-                <p class="text-slate-600">Platform ekosistem terintegrasi yang menghubungkan teknologi canggih dengan kekuatan komunitas.</p>
+    <section id="prototype" class="py-24 bg-slate-900 text-white relative">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-brand-400 font-bold tracking-widest uppercase text-sm mb-3">
+                <span class="lang-id">Demonstrasi Produk</span><span class="lang-en hidden">Product Demo</span>
+            </h2>
+            <h3 class="text-3xl md:text-5xl font-bold mb-10">
+                <span class="lang-id">Tampilan Antarmuka & Alat</span>
+                <span class="lang-en hidden">Interface & Hardware Preview</span>
+            </h3>
+
+            <div class="max-w-5xl mx-auto bg-slate-800 rounded-2xl shadow-2xl border border-slate-700 overflow-hidden relative group">
+                
+                <div class="bg-slate-900 px-4 py-3 flex items-center gap-2 border-b border-slate-700">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <div class="ml-4 text-xs text-slate-500 font-mono">reloop-nexus-prototype_v1.0.exe</div>
+                </div>
+
+                <div class="relative w-full h-[500px] bg-slate-900 flex items-center justify-center overflow-hidden">
+    
+                    <img src="IMG/WhatsApp Image 2025-12-25 at 22.09.00.jpeg" alt="Prototype ReLoop" class="max-w-full max-h-full object-contain shadow-2xl">
+
+                </div>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white p-6 rounded-xl border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition duration-300">
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-4 text-2xl">🤖</div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">AI Sorting (AIMSI)</h4>
-                    <p class="text-slate-600 text-sm">Identifikasi & klasifikasi limbah real-time menggunakan Computer Vision & ML di fasilitas MRF. Akurasi >90%.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition duration-300">
-                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center mb-4 text-2xl">🤝</div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">Smart ReLoop Hubs</h4>
-                    <p class="text-slate-600 text-sm">Reverse logistics berbasis komunitas yang menghubungkan pemulung, konsumen, dan Bank Sampah secara digital.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition duration-300">
-                    <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mb-4 text-2xl">🔄</div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">Regenerative Loop</h4>
-                    <p class="text-slate-600 text-sm">Sistem closed-loop yang memastikan material kembali ke siklus produksi dengan kualitas fungsional tinggi.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition duration-300">
-                    <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mb-4 text-2xl">📊</div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">Circularity Dashboard</h4>
-                    <p class="text-slate-600 text-sm">Visualisasi data end-to-end untuk melacak transfer material dan tingkat pemulihan secara transparan.</p>
-                </div>
-            </div>
+            <p class="mt-8 text-slate-400 max-w-2xl mx-auto text-sm">
+                <span class="lang-id">*Visualisasi di atas menggambarkan integrasi antara Dashboard Monitoring dan Aplikasi Mobile Pengguna.*</span>
+                <span class="lang-en hidden">*Visualization above depicts the integration between the Monitoring Dashboard and User Mobile App.*</span>
+            </p>
         </div>
     </section>
 
     <section id="impact" class="py-24 bg-slate-900 text-white relative overflow-hidden">
         <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        
         <div class="container mx-auto px-6 relative z-10">
-            <h2 class="text-3xl font-bold text-center mb-16">Dampak Masif untuk Masa Depan</h2>
+            <h2 class="text-3xl font-bold text-center mb-16">
+                <span class="lang-id">Dampak Masif untuk Masa Depan</span>
+                <span class="lang-en hidden">Massive Impact for the Future</span>
+            </h2>
+
             <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm">
-                    <div class="text-brand-400 font-bold mb-4 uppercase tracking-wider text-sm">Lingkungan</div>
+                
+                <div class="p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition duration-300">
+                    <div class="text-brand-400 font-bold mb-4 uppercase tracking-wider text-sm">
+                        <span class="lang-id">Lingkungan</span>
+                        <span class="lang-en hidden">Environment</span>
+                    </div>
                     <h3 class="text-2xl font-semibold mb-2">Zero Plastic Leakage</h3>
-                    <p class="text-slate-400 text-sm">Mengurangi ketergantungan bahan virgin dan mencegah kebocoran plastik ke lautan.</p>
+                    <p class="text-slate-400 text-sm">
+                        <span class="lang-id">Mengurangi ketergantungan bahan virgin dan mencegah kebocoran plastik ke lautan.</span>
+                        <span class="lang-en hidden">Reducing reliance on virgin materials and preventing plastic leakage into oceans.</span>
+                    </p>
                 </div>
-                <div class="p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm">
-                    <div class="text-blue-400 font-bold mb-4 uppercase tracking-wider text-sm">Ekonomi</div>
-                    <h3 class="text-2xl font-semibold mb-2">Efisiensi Biaya MRF</h3>
-                    <p class="text-slate-400 text-sm">Meningkatkan kualitas recyclate bernilai tinggi dan menurunkan biaya operasional sortir.</p>
+
+                <div class="p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition duration-300">
+                    <div class="text-blue-400 font-bold mb-4 uppercase tracking-wider text-sm">
+                        <span class="lang-id">Ekonomi</span>
+                        <span class="lang-en hidden">Economy</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">
+                        <span class="lang-id">Efisiensi Biaya MRF</span>
+                        <span class="lang-en hidden">MRF Cost Efficiency</span>
+                    </h3>
+                    <p class="text-slate-400 text-sm">
+                        <span class="lang-id">Meningkatkan kualitas recyclate bernilai tinggi dan menurunkan biaya operasional sortir.</span>
+                        <span class="lang-en hidden">Increasing high-value recyclate quality and reducing sorting operational costs.</span>
+                    </p>
                 </div>
-                <div class="p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm">
-                    <div class="text-purple-400 font-bold mb-4 uppercase tracking-wider text-sm">Sosial</div>
-                    <h3 class="text-2xl font-semibold mb-2">Pemberdayaan Mitra</h3>
-                    <p class="text-slate-400 text-sm">Insentif ekonomi yang adil bagi pemulung dan literasi digital bagi komunitas lokal.</p>
+
+                <div class="p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition duration-300">
+                    <div class="text-purple-400 font-bold mb-4 uppercase tracking-wider text-sm">
+                        <span class="lang-id">Sosial</span>
+                        <span class="lang-en hidden">Social</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">
+                        <span class="lang-id">Pemberdayaan Mitra</span>
+                        <span class="lang-en hidden">Partner Empowerment</span>
+                    </h3>
+                    <p class="text-slate-400 text-sm">
+                        <span class="lang-id">Insentif ekonomi yang adil bagi pemulung dan literasi digital bagi komunitas lokal.</span>
+                        <span class="lang-en hidden">Fair economic incentives for waste pickers and digital literacy for local communities.</span>
+                    </p>
                 </div>
+
             </div>
         </div>
     </section>
 
     <section id="team" class="py-24 bg-white">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-slate-900 mb-4">Tim Penyusun</h2>
-            <p class="text-slate-600 mb-12">Mahasiswa Universitas Trunojoyo Madura</p>
+            
+            <h2 class="text-3xl font-bold text-slate-900 mb-4">
+                <span class="lang-id">Tim Penyusun</span>
+                <span class="lang-en hidden">Our Team</span>
+            </h2>
+            
+            <p class="text-slate-600 mb-12">
+                <span class="lang-id">Mahasiswa Universitas Trunojoyo Madura</span>
+                <span class="lang-en hidden">Students of University of Trunojoyo Madura</span>
+            </p>
             
             <div class="flex flex-wrap justify-center gap-10">
+                
                 <div class="group">
-                    <div class="w-32 h-32 bg-slate-200 rounded-full mx-auto mb-4 overflow-hidden relative">
-                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ari" alt="Ari" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="w-32 h-32 bg-slate-200 rounded-full mx-auto mb-4 overflow-hidden relative border-4 border-white shadow-lg">
+                        <img src="IMG/WhatsApp Image 2025-11-01 at 17.55.27_ea3a5a12.jpg" alt="Ari" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
                     <h3 class="font-bold text-slate-900 text-lg">Ari Akbar</h3>
-                    <p class="text-brand-600 text-sm font-medium">Manajemen</p>
+                    <p class="text-brand-600 text-sm font-medium">
+                        <span class="lang-id">Manajemen</span>
+                        <span class="lang-en hidden">Management</span>
+                    </p>
                 </div>
+
                 <div class="group">
-                    <div class="w-32 h-32 bg-slate-200 rounded-full mx-auto mb-4 overflow-hidden relative">
-                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Faisal" alt="Faisal" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="w-32 h-32 bg-slate-200 rounded-full mx-auto mb-4 overflow-hidden relative border-4 border-white shadow-lg">
+                        <img src="IMG/WhatsApp Image 2025-11-01 at 19.00.59_3770392a.jpg" alt="Faisal" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
                     <h3 class="font-bold text-slate-900 text-lg">Achmad Faisal</h3>
-                    <p class="text-brand-600 text-sm font-medium">Manajemen</p>
+                    <p class="text-brand-600 text-sm font-medium">
+                        <span class="lang-id">Manajemen</span>
+                        <span class="lang-en hidden">Management</span>
+                    </p>
                 </div>
+
                 <div class="group">
-                    <div class="w-32 h-32 bg-slate-200 rounded-full mx-auto mb-4 overflow-hidden relative">
-                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Jamil" alt="Jamil" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="w-32 h-32 bg-slate-200 rounded-full mx-auto mb-4 overflow-hidden relative border-4 border-white shadow-lg">
+                        <img src="IMG/WhatsApp Image 2025-12-27 at 15.26.55.jpeg" alt="Jamil" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
                     <h3 class="font-bold text-slate-900 text-lg">Mishbahul Jamil</h3>
-                    <p class="text-brand-600 text-sm font-medium">Agribisnis</p>
+                    <p class="text-brand-600 text-sm font-medium">
+                        <span class="lang-id">Agribisnis</span>
+                        <span class="lang-en hidden">Agribusiness</span>
+                    </p>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-slate-500 py-10 border-t border-slate-800">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-            <p class="mb-4 md:mb-0 text-sm">&copy; 2025 ReLoop Nexus. Business Case Solution for Nestlé.</p>
-            <div class="flex space-x-6">
-                <a href="#" class="hover:text-white transition">Privacy</a>
-                <a href="#" class="hover:text-white transition">Contact</a>
-            </div>
-        </div>
+    <footer class="bg-slate-900 text-slate-500 py-8 text-center text-sm">
+        &copy; 2025 ReLoop Nexus.
     </footer>
+
+    <script>
+        let isEnglish = false; // Default Bahasa Indonesia
+
+        function toggleLanguage() {
+            isEnglish = !isEnglish;
+            
+            // Ambil semua elemen ID dan EN
+            const idElements = document.querySelectorAll('.lang-id');
+            const enElements = document.querySelectorAll('.lang-en');
+            const btnText = document.getElementById('btn-text');
+
+            if (isEnglish) {
+                // Mode Inggris: Sembunyikan ID, Munculkan EN
+                idElements.forEach(el => el.classList.add('hidden'));
+                enElements.forEach(el => {
+                    el.classList.remove('hidden');
+                    el.classList.add('fade-in'); // Efek animasi
+                });
+                btnText.textContent = "ID 🇮🇩"; // Tombol berubah jadi opsi balik ke ID
+            } else {
+                // Mode Indo: Sembunyikan EN, Munculkan ID
+                enElements.forEach(el => el.classList.add('hidden'));
+                idElements.forEach(el => {
+                    el.classList.remove('hidden');
+                    el.classList.add('fade-in');
+                });
+                btnText.textContent = "EN 🇬🇧"; // Tombol berubah jadi opsi ke EN
+            }
+        }
+    </script>
 
 </body>
 </html>
